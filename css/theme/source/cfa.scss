@@ -23,7 +23,7 @@
 $mainFont: 'Lato', sans-serif;
 $mainColor: #000;
 $headingFont: 'Source Sans Pro', sans-serif;
-$headingColor: #000;
+$headingColor: #399fd3;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
@@ -31,12 +31,39 @@ $linkColor: #00008B;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
-h1 {
+section {
+  text-align: left;
+  height: 80%;
+}
+
+h1, h2 {
   font-weight: bold!important;
 }
 
+small {
+  font-weight: 200 !important;
+}
+
+ul {
+    margin: 0.75em 0;
+    padding: 0 1em;
+    list-style: none !important;
+}
+li:before {
+    content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
 // Add additional stuff to CfA
-.text-white, .text-white h1, .text-white h3, .text-white p {
+.text-white, .text-white h1, .text-white h2, .text-white h3, .text-white p {
   color: #FFFFFF!important;
 }
 
@@ -46,14 +73,16 @@ h1 {
    bottom:0;
    right:0;
    z-index:100; /* or higher/lower depending on other elements */
-   width: 142px;
-   height: 60px;
+   width: 150px;
+   height: 150px;
    border: 0px;
 }
 .logo img {
   border: 0px !important;
   box-shadow: 0 0 0 0!important;
   background: transparent !important;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 

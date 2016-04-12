@@ -7,10 +7,34 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300,200,300italic,200italic,400italic,600italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-h1 {
+section {
+  text-align: left;
+  height: 80%; }
+
+h1, h2 {
   font-weight: bold !important; }
 
-.text-white, .text-white h1, .text-white h3, .text-white p {
+small {
+  font-weight: 200 !important; }
+
+ul {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none !important; }
+
+li:before {
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative; }
+
+.text-white, .text-white h1, .text-white h2, .text-white h3, .text-white p {
   color: #FFFFFF !important; }
 
 .logo {
@@ -19,14 +43,16 @@ h1 {
   right: 0;
   z-index: 100;
   /* or higher/lower depending on other elements */
-  width: 142px;
-  height: 60px;
+  width: 150px;
+  height: 150px;
   border: 0px; }
 
 .logo img {
   border: 0px !important;
   box-shadow: 0 0 0 0 !important;
-  background: transparent !important; }
+  background: transparent !important;
+  max-width: 100%;
+  max-height: 100%; }
 
 /*********************************************
  * GLOBAL STYLES
@@ -61,7 +87,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #000;
+  color: #399fd3;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   line-height: 1.2;
