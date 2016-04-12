@@ -1,0 +1,62 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300,200,300italic,200italic,400italic,600italic,700italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #000;
+$headingFont: 'Source Sans Pro', sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #00008B;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+h1 {
+  font-weight: bold!important;
+}
+
+// Add additional stuff to CfA
+.text-white, .text-white h1, .text-white h3, .text-white p {
+  color: #FFFFFF!important;
+}
+
+// Add the CfA logo to the bottom right
+.logo {
+  position:fixed;
+   bottom:0;
+   right:0;
+   z-index:100; /* or higher/lower depending on other elements */
+   width: 142px;
+   height: 60px;
+   border: 0px;
+}
+.logo img {
+  border: 0px !important;
+  box-shadow: 0 0 0 0!important;
+  background: transparent !important;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
